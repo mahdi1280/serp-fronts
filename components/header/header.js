@@ -19,7 +19,7 @@ export default function Header(){
             </ul>
         </nav>
         <div className="col-1 header-icon">
-            <img src={"/man.svg"} alt={"man for login page"}/>
+            <a href={"http://panel.ratewatch.ir/login"}><img src={"/man.svg"} alt={"man for login page"}/></a>
             <img src={"/shoping.svg"} alt={"shopping card icon"}/>
         </div>
     </header>;

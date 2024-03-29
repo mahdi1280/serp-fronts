@@ -5,7 +5,7 @@ export default function Header(){
         <div className={"logo col-3"}>
             <img src={"/logo.webp"} alt={"لوگوی سایت ریت واچ"}/>
         </div>
-        <nav className={"navigation col-8"}>
+        <nav className={"navigation col-8 d-none d-lg-flex"}>
             <ul>
                 <li><a>صفحه اصلی</a></li>
                 <li><a>دوره ها</a></li>

@@ -2,8 +2,9 @@ import style from './style.module.css';
 
 export default function IndexDetails(){
     return <section className={style.minSection+" row"}>
-        <div className={"col-6"}>
+        <div className={"col-12 col-lg-6"}>
             <h2>
+                <img src={'/imgHeader.svg'} alt={"header style list"}/>
                 آنالیز سئو سایت با ریت واچ
             </h2>
             <p>
@@ -35,7 +36,7 @@ export default function IndexDetails(){
             </p>
             <button className={style.btn}>تست رایگان تحقیق کلمات کلیدی</button>
         </div>
-        <div className={"col-6 "+ style.sectionBanner}>
+        <div className={"col-12 col-lg-6 "+ style.sectionBanner}>
             <img src="/bnner.webp" className={style.bannerImg} alt="banner site and detils sitea"/>
         </div>
     </section>

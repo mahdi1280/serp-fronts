@@ -81,3 +81,10 @@ body{
   opacity: 0.8;
   transition: 0.2s;
 }
+.readMore{
+  max-height: fit-content!important;
+}
+.readMore:after{
+  width: 0;
+  height: 0 !important;
+}

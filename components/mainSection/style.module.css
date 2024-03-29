@@ -26,13 +26,13 @@
 }
 .comment{
     font-weight: bolder;
-    padding: 18px;
+    padding: 15px;
     font-size: 20px;
     background-color: var(--purpleColor2);
     color:  var(--purpleColor);
     border-radius: 18px;
     border:none;
-    margin-left: 8px;
+    margin-left: 4px;
 }
 .center{
     display: flex;

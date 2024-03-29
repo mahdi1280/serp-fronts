@@ -1,0 +1,37 @@
+.details{
+    font-size: 18px;
+    line-height: 28px;
+    text-align: justify;
+    max-height: 200px;
+    position: relative;
+    overflow-y: hidden;
+    padding: 18px;
+}
+.details:after{
+    content: "";
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(rgba(128,128,128,0),#fff);
+    height: 100px;
+
+}
+.mainDetails{
+    border: 2px solid var(--purpleColor);
+    border-radius: 16px;
+}
+
+.btn{
+    border: none;
+    padding: 8px;
+    background-color: transparent;
+    opacity: 0.8;
+    transition: 0.2s;
+}
+.btn:hover{
+    opacity: 1;
+    cursor: pointer;
+    transition: 0.2s;
+}
+

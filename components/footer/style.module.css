@@ -1,0 +1,21 @@
+.logo{
+    width: 100px;
+    height: 90px;
+    margin-bottom: 8px;
+}
+.svg svg{
+    width: 40px;
+    height: 40px;
+    margin: 4px;
+    fill: var(--purpleColor);
+    transition: 0.2s;
+}
+.svg svg:hover{
+    opacity: 0.8;
+    transition: 0.2s;
+    cursor: pointer;
+}
+.footer{
+    text-align: center;
+    justify-content: center;
+}

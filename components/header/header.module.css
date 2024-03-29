@@ -1,0 +1,11 @@
+.hamberger{
+    width: 40px;
+    height: 40px;
+    fill: var(--purpleColor);
+    transition: 0.2s;
+}
+.hamberger:hover{
+    cursor: pointer;
+    opacity: 0.8;
+    transition: 0.2s;
+}

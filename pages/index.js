@@ -7,6 +7,7 @@ import MainSection from "@/components/mainSection/mainSection";
 import IndexDetails from "@/components/indexDetils/indexDetils";
 import Reading from "@/components/reading/reading";
 import BlogSection from "@/components/blogSection/blogSection";
+import Footer from "@/components/footer/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -31,6 +32,8 @@ export default function Home() {
           <IndexDetails/>
           <BlogSection/>
           <Reading/>
+          <Footer/>
+
       </div>
 
     </>

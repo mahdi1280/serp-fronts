@@ -1,5 +1,7 @@
 :root{
   --purpleColor : rgb(124, 58, 237);
+  --purpleColor2 : rgb(243, 232, 255);
+  --grayColor: #757575;
 }
 @font-face {
   font-family: yBakh;
@@ -68,7 +70,7 @@ body{
   display: flex;
 }
 .header-icon img{
-  background-color: rgb(243, 232, 255);
+  background-color: var(--purpleColor2);
   border-radius: 14px;
   padding: 14px;
   transition: 0.2s;

@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import Header from "@/components/header/header";
+import MainSection from "@/components/mainSection/mainSection";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,7 +18,12 @@ export default function Home() {
       </Head>
       <div className="container">
           <Header/>
+          <MainSection/>
+          <div className={styles.arrow}>
+              <img src={"/arrow.svg"} alt="arrow for pointer"/>
+          </div>
       </div>
+
     </>
   );
 }

@@ -1,0 +1,40 @@
+.h1{
+    font-size: 60px;
+    font-weight: 900;
+}
+.details{
+    color: var(--grayColor);
+    font-size: 20px;
+}
+.section1{
+    padding: 16px;
+}
+.free7{
+    padding: 18px;
+    font-size: 20px;
+    background-color: var(--purpleColor);
+    color: white;
+    border-radius: 18px;
+    border:none;
+    margin-left: 8px;
+    transition: 0.2s;
+    font-weight: bolder;
+}
+.free7:hover{
+    opacity: 0.8;
+    transition: 0.2s;
+}
+.comment{
+    font-weight: bolder;
+    padding: 18px;
+    font-size: 20px;
+    background-color: var(--purpleColor2);
+    color:  var(--purpleColor);
+    border-radius: 18px;
+    border:none;
+    margin-left: 8px;
+}
+.center{
+    display: flex;
+    align-items: center;
+}

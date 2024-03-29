@@ -37,6 +37,7 @@
 }
 
 body{
+  background-color: #fcfcfc !important;
   font-family: "yBakh" !important;
   box-sizing: border-box;
   margin: 0;

@@ -3,6 +3,9 @@
     border-radius: 12px;
     padding: 24px;
     font-size: 18px;
+    background-color: white;
+    box-shadow: rgba(94, 129, 209, 0.16) 0px 8px 24px;
+
 }
 .btn{
     background-color:var(--purpleColor);

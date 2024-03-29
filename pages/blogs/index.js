@@ -6,7 +6,7 @@ import Footer from "@/components/footer/footer";
 export default function Index(){
     return <>
         <Head>
-            <title>سرپ انجین</title>
+            <title>مقالات سرپ انجین</title>
             <meta name="description" content="سرپ انجین سایت تحلیل صفحات سایت شما برای رقابت در گوگل" />
             <meta property="og:type" content="website" />
             <meta property="og:title" content="سرپ انجین" />

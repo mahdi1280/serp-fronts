@@ -16,7 +16,7 @@ export default function Header(){
                 <li><Link href={"/"}>صفحه اصلی</Link></li>
                 <li><Link href={"/blogs"}>مقالات</Link></li>
                 <li><a>نظرات کاربران</a></li>
-                <li><a>درباره ما</a></li>
+                <li><Link href={"/about-us"}>درباره ما</Link></li>
             </ul>
         </nav>
         <div className="col-3 col-lg-1 header-icon">

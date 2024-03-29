@@ -31,7 +31,9 @@ export default function Footer(){
             <div className="col-12 col-lg-2">
                 <img src={'/logo.webp'} className={style.logo} alt={"logo"}/>
             </div>
-
+            <div className="col-12">
+                <p>ساحته شده با ❤️ توسط مهدی کریمی</p>
+            </div>
         </footer>
     </>
 }

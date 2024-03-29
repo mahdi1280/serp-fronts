@@ -22,12 +22,17 @@
 }
 .time{
     color: var(--purpleColor);
-    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.time p{
+    margin: 0;
+    padding: 4px;
 }
 .readTime{
     color: var(--purpleColor);
     float: left;
-    margin-bottom: 8px;
 }
 .btn{
     color: white;
@@ -50,4 +55,9 @@
     margin-top: 8px;
     border-top: 1px solid rgba(0, 0, 0, 0.12);
     padding: 8px;
+}
+.sectionTime{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }

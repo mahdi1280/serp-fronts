@@ -8,9 +8,9 @@ export default function MainSection(){
                 <p className={style.details}>
                     تحلیل های هدفمند، مشاهده رتبه کلمات کلیدی به صورت روزانه و برسی سایت از لحاظ ساختاری و محتوایی برای راحت شدن کار برای افراد seo کار
                 </p>
-                <div>
-                    <button className={style.free7}>استفاده 7 روز رایگان</button>
-                    <button className={style.comment}> مشاهده نظرات کاربران</button>
+                <div className={"row"}>
+                    <button className={style.free7+" col-5"}>استفاده 7 روز رایگان</button>
+                    <button className={style.comment +" col-6"}> مشاهده نظرات کاربران</button>
                 </div>
             </div>
         </div>

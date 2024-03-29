@@ -3,10 +3,7 @@ import style from './style.module.css';
 export default function BlogSection(){
     return <>
         <section className={"row mt-4 "}>
-            <h2>
-                <img src={'/imgHeader.svg'} alt={"header style list"}/>
-                 مقالات
-            </h2>
+
             <div className={"col-12 col-lg-3 mt-2"}>
                <div className={style.readingCart}>
                    <img src={"/blog-img.jpg"} alt={"blog img description"} className={style.img}/>

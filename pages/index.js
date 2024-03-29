@@ -30,7 +30,12 @@ export default function Home() {
               <img src={"/arrow.svg"} alt="arrow for pointer"/>
           </div>
           <IndexDetails/>
+          <h2 className={"mt-5"}>
+              <img src={'/imgHeader.svg'} alt={"header style list"}/>
+              مقالات
+          </h2>
           <BlogSection/>
+
           <Reading/>
           <Footer/>
 

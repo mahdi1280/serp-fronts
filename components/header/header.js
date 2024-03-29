@@ -1,4 +1,5 @@
 import style from './header.module.css';
+import Link from "next/link";
 
 export default function Header(){
     return <header className={"row header mt-3 p-2"}>
@@ -12,8 +13,8 @@ export default function Header(){
         </div>
         <nav className={"navigation col-5 col-lg-8"}>
             <ul className={"d-none d-lg-flex"}>
-                <li><a>صفحه اصلی</a></li>
-                <li><a>مقالات</a></li>
+                <li><Link href={"/"}>صفحه اصلی</Link></li>
+                <li><Link href={"/blogs"}>مقالات</Link></li>
                 <li><a>نظرات کاربران</a></li>
                 <li><a>درباره ما</a></li>
             </ul>

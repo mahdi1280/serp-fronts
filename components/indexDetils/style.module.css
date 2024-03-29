@@ -1,0 +1,25 @@
+.minSection{
+    border:2px solid var(--purpleColor);
+    border-radius: 12px;
+    padding: 24px;
+    font-size: 18px;
+}
+.btn{
+    background-color:var(--purpleColor);
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-weight: bolder;
+    padding: 12px;
+}
+.btn:hover{
+    opacity: 0.8;
+    transition: 0.2s;
+}
+.bannerImg{
+    width: 100%;
+}
+.sectionBanner{
+    display: flex;
+    align-items: center;
+}

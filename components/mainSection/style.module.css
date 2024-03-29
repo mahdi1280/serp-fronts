@@ -38,3 +38,6 @@
     display: flex;
     align-items: center;
 }
+.monitor{
+    width: 100%;
+}

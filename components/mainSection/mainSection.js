@@ -2,7 +2,7 @@ import style from './style.module.css';
 
 export default function MainSection(){
     return <section className={"row mt-3"}>
-        <div className={"col-6 " + style.section1 + " "+ style.center}>
+        <div className={"col-12 col-lg-6 " + style.section1 + " "+ style.center}>
             <div>
                 <h1 className={style.h1}>تحلیلی SEO سایت های شما با ابزار ریت واچ</h1>
                 <p className={style.details}>
@@ -14,8 +14,8 @@ export default function MainSection(){
                 </div>
             </div>
         </div>
-        <div className="col-6">
-            <img src="/monitor.webp" alt=""/>
+        <div className="col-12 col-lg-6">
+            <img src="/monitor.webp" className={style.monitor} alt=""/>
         </div>
     </section>;
 }

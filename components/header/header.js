@@ -12,7 +12,7 @@ export default function Header(){
             </span>
         </div>
         <nav className={"navigation col-5 col-lg-8"}>
-            <ul className={"d-none d-lg-flex"}>
+            <ul className={"d-none d-lg-flex "+ style.nav}>
                 <li><Link href={"/"}>صفحه اصلی</Link></li>
                 <li><Link href={"/blogs"}>مقالات</Link></li>
                 <li><a>نظرات کاربران</a></li>

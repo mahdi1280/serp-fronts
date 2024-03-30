@@ -9,3 +9,11 @@
     opacity: 0.8;
     transition: 0.2s;
 }
+.nav li a{
+    text-decoration: none;
+    color: black;
+}
+.nav li a:hover{
+    color: var(--purpleColor);
+    transition: 0.4s;
+}

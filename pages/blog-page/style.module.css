@@ -1,0 +1,25 @@
+.header:after {
+    content: "";
+    position: absolute;
+    right: -40px;
+    top: 0;
+    width: 33px;
+    height: 29px;
+    background-image: url(/imgHeader.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.header{
+    position: relative;
+    margin-right: 24px;
+}
+.marker{
+    color: rgb(97, 97, 97);
+    background-color: rgb(238, 238, 238);
+    padding: 6px;
+    margin-bottom:8px;
+    border-radius: 2px;
+}
+.details{
+    margin-top: 12px;
+}

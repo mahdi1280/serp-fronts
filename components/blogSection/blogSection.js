@@ -1,4 +1,5 @@
 import style from './style.module.css';
+import Link from "next/link";
 
 export default function BlogSection(){
     return <>
@@ -19,7 +20,7 @@ export default function BlogSection(){
                       <span className={style.readTime}>زمان تقریبی مطالعه 2 دقیقه</span>
                   </div>
                    <div className={style.btnSection}>
-                       <button className={style.btn}>مشاهده مقاله</button>
+                       <Link href={"/blog-page/1"} className={style.btn}>مشاهده مقاله</Link>
                    </div>
                </div>
             </div>
@@ -38,7 +39,7 @@ export default function BlogSection(){
                         <span className={style.readTime}>زمان تقریبی مطالعه 2 دقیقه</span>
                     </div>
                     <div className={style.btnSection}>
-                        <button className={style.btn}>مشاهده مقاله</button>
+                        <Link href={"/blog-page/1"} className={style.btn}>مشاهده مقاله</Link>
                     </div>
                 </div>
             </div>
@@ -57,7 +58,7 @@ export default function BlogSection(){
                         <span className={style.readTime}>زمان تقریبی مطالعه 2 دقیقه</span>
                     </div>
                     <div className={style.btnSection}>
-                        <button className={style.btn}>مشاهده مقاله</button>
+                        <Link href={"/blog-page/1"} className={style.btn}>مشاهده مقاله</Link>
                     </div>
                 </div>
             </div>
@@ -76,7 +77,7 @@ export default function BlogSection(){
                         <span className={style.readTime}>زمان تقریبی مطالعه 2 دقیقه</span>
                     </div>
                     <div className={style.btnSection}>
-                        <button className={style.btn}>مشاهده مقاله</button>
+                        <Link href={"/blog-page/1"} className={style.btn}>مشاهده مقاله</Link>
                     </div>
                 </div>
             </div>

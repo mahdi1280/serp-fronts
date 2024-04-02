@@ -8,6 +8,7 @@ import IndexDetails from "@/components/indexDetils/indexDetils";
 import Reading from "@/components/reading/reading";
 import BlogSection from "@/components/blogSection/blogSection";
 import Footer from "@/components/footer/footer";
+import OfferSection from "@/components/OfferSection/OfferSection";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,6 +31,8 @@ export default function Home() {
               <img src={"/arrow.svg"} alt="arrow for pointer"/>
           </div>
           <IndexDetails/>
+          <OfferSection/>
+
           <h2 className={"mt-5"}>
               <img src={'/imgHeader.svg'} alt={"header style list"}/>
               مقالات

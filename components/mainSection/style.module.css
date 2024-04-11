@@ -19,6 +19,8 @@
     margin-left: 8px;
     transition: 0.2s;
     font-weight: bolder;
+    text-decoration: none;
+    text-align: center;
 }
 .free7:hover{
     opacity: 0.8;

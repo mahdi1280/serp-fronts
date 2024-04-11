@@ -2,6 +2,7 @@ import style from './style.module.css';
 import Skeleton from "react-loading-skeleton";
 import Image from "next/image";
 import monitor from "@/public/monitor.webp";
+import Link from "next/link";
 
 export default function MainSection() {
 
@@ -19,7 +20,7 @@ export default function MainSection() {
                     راحت شدن کار برای افراد seo کار
                 </p>
                 <div className={"row"}>
-                    <button className={style.free7 + " col-5"}>استفاده 7 روز رایگان</button>
+                    <Link href={"http://panel.ratewatch.ir/login"} className={style.free7 + " col-5"}>استفاده 7 روز رایگان</Link>
                     <button className={style.comment + " col-6"}> مشاهده نظرات کاربران</button>
                 </div>
             </div>

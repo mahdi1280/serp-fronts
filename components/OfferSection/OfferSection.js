@@ -1,4 +1,5 @@
 import style from './style.module.css';
+import Link from "next/link";
 
 export default function OfferSection(){
     return <>
@@ -16,7 +17,7 @@ export default function OfferSection(){
                     <p>  <span className={style.green}>رایگان</span> / 7 روز</p>
                     <p>تعداد سایت: 3</p>
                     <p>بررسی روزانه رتبه کلمات کلیدی: بستگی به api key وارد شده در سیستم</p>
-                    <button className={style.btnFree}>سفارش</button>
+                    <Link href={"http://panel.ratewatch.ir/login"} className={style.btnFree}>سفارش</Link>
                 </div>
             </div>
             <div className="col-12 col-lg-4 mt-5 mt-lg-0 ">
@@ -30,7 +31,7 @@ export default function OfferSection(){
                            <p>59 هزار تومان / ماهانه</p>
                            <p>تعداد سایت: 6</p>
                            <p>بررسی روزانه رتبه کلمات کلیدی: بستگی به api key وارد شده در سیستم</p>
-                           <button className={style.btn}>سفارش</button>
+                           <Link href={"http://panel.ratewatch.ir/login"} className={style.btn}>سفارش</Link>
                        </div>
                    </div>
                </div>
@@ -44,7 +45,7 @@ export default function OfferSection(){
                 <p>99 هزار تومان / ماهانه</p>
                 <p>تعداد سایت: 20</p>
                 <p>بررسی روزانه رتبه کلمات کلیدی: بستگی به api key وارد شده در سیستم</p>
-                <button className={style.btn}>سفارش</button>
+                <Link href={"http://panel.ratewatch.ir/login"} className={style.btn}>سفارش</Link>
                 </div>
             </div>
         </div>

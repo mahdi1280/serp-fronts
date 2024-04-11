@@ -42,6 +42,7 @@
     transition: 0.2s;
     width: 100%;
     opacity: 0.9;
+    text-decoration: none;
 }
 
 .btn:hover, .btnFree:hover{
@@ -68,6 +69,7 @@
     transition: 0.2s;
     width: 100%;
     opacity: 0.9;
+    text-decoration: none;
 }
 .green{
    color: rgb(12, 166, 81);

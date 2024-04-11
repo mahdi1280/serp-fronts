@@ -1,5 +1,6 @@
 import style from './style.module.css';
 import Skeleton from "react-loading-skeleton";
+import Link from "next/link";
 
 export default function IndexDetails(){
     return <section className={style.minSection+" row"}>
@@ -35,7 +36,7 @@ export default function IndexDetails(){
             <p>
                 کافیست همین حالا عضو جت سئو شوید و با کلیک روی لینک زیر نتایج شگفت‌انگیز بررسی سئو سایت خودتان را ببینید.
             </p>
-            <button className={style.btn}>تست رایگان تحقیق کلمات کلیدی</button>
+            <Link href={"http://panel.ratewatch.ir/login"} className={style.btn}>تست رایگان تحقیق کلمات کلیدی</Link>
         </div>
         <div className={"col-12 col-lg-6 "+ style.sectionBanner}>
             <img src="/bnner.webp" className={style.bannerImg} alt="banner site and detils sitea"/>

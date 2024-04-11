@@ -8,13 +8,14 @@ import Shopping from "@/public//shoping.svg"
 
 export default function Header(){
     function removeSkeletonIcon() {
-        document.getElementById("removeSkeletonIcon").style.display="none";
+        if(document.getElementById("removeSkeletonIcon"))
+            document.getElementById("removeSkeletonIcon").classList.remove("d-lg-flex");
     }
 
     return <header className={"row header mt-3 p-2"}>
         <div className={"logo col-3"}>
-            <div id={"removeSkeletonIcon"} className={"position-ab"}>
-                <Skeleton  width={80} height={80} borderRadius={50}/>
+            <div id={"removeSkeletonIcon"} className={"position-ab d-none d-lg-flex"}>
+                <Skeleton width={80} height={80} borderRadius={50}/>
             </div>
             <Image
                 src={Logo}

@@ -1,7 +1,7 @@
 import style from './style.module.css';
 import Skeleton from "react-loading-skeleton";
 import Image from "next/image";
-import monitor from "../../public/monitor.webp";
+import monitor from "@/public/monitor.webp";
 
 export default function MainSection() {
 
@@ -25,11 +25,12 @@ export default function MainSection() {
             </div>
         </div>
         <div className="col-12 col-lg-6">
-                <div id={"monitorSkeleton"}>
+                <div id={"monitorSkeleton"} className={"position-ab"}>
                     <Skeleton height={532}/>
                 </div>
                 <Image
                     src={monitor}
+                    loading={"lazy"}
                     className={style.monitor}
                     onLoad={handleImageLoad}
                     alt="نمایش مانیتور سایت ریت واچ"/>

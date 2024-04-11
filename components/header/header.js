@@ -1,10 +1,27 @@
 import style from './header.module.css';
 import Link from "next/link";
+import Skeleton from "react-loading-skeleton";
+import Image from "next/image";
+import Logo from "@/public/logo.webp"
+import Man from "@/public/man.svg"
+import Shopping from "@/public//shoping.svg"
 
 export default function Header(){
+    function removeSkeletonIcon() {
+        document.getElementById("removeSkeletonIcon").style.display="none";
+    }
+
     return <header className={"row header mt-3 p-2"}>
         <div className={"logo col-3"}>
-            <img src={"/logo.webp"} alt={"لوگوی سایت ریت واچ"} className={"d-none d-lg-flex"}/>
+            <div id={"removeSkeletonIcon"} className={"position-ab"}>
+                <Skeleton  width={80} height={80} borderRadius={50}/>
+            </div>
+            <Image
+                src={Logo}
+                alt={"لوگوی سایت ریت واچ"}
+                className={"d-none d-lg-flex"}
+                onLoad={removeSkeletonIcon}
+            />
             <span className={"d-block d-lg-none "+ style.hamberger}>
                 <svg className="MuiSvgIcon-root MuiSvgIcon-fontSizeLarge css-6flbmm" focusable="false"
                      aria-hidden="true" viewBox="0 0 24 24" data-testid="MenuRoundedIcon"><path
@@ -20,8 +37,27 @@ export default function Header(){
             </ul>
         </nav>
         <div className="col-3 col-lg-1 header-icon">
-            <a href={"http://panel.ratewatch.ir/login"}><img src={"/man.svg"} alt={"man for login page"}/></a>
-            <img src={"/shoping.svg"} alt={"shopping card icon"}/>
+            <a href={"http://panel.ratewatch.ir/login"}>
+                <div className={"position-ab"} id={"iconMan-load"}>
+                    <Skeleton width={48} height={48} />
+                </div>
+                <Image
+                    src={Man}
+                    alt={"صفحه لاگین"} width={48} height={48}
+                    onLoad={()=>document.getElementById("iconMan-load").style.display="none"}
+                />
+            </a>
+            <div>
+                <div className={"position-ab"} id={"shopping-load"}>
+                    <Skeleton width={48} height={48} />
+                </div>
+                <Image
+                    src={Shopping}
+                    alt={"خرید اکانت"}
+                    width={48} height={48}
+                    onLoad={()=>document.getElementById("shopping-load").style.display="none"}
+                />
+            </div>
         </div>
     </header>;
 }

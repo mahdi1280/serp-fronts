@@ -1,4 +1,5 @@
 import style from './style.module.css';
+import Skeleton from "react-loading-skeleton";
 
 export default function IndexDetails(){
     return <section className={style.minSection+" row"}>

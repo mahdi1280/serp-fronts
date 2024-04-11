@@ -11,6 +11,7 @@ import Footer from "@/components/footer/footer";
 import OfferSection from "@/components/OfferSection/OfferSection";
 import Skeleton from "react-loading-skeleton";
 import 'react-loading-skeleton/dist/skeleton.css'
+import Arrow from '@/public/arrow.svg'
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,7 +31,14 @@ export default function Home() {
           <Header/>
           <MainSection/>
           <div className={styles.arrow}>
-              <img src={"/arrow.svg"} alt="arrow for pointer"/>
+              <div id={"arrow-loading"} className={"position-ab"} >
+                  <Skeleton height={155} width={158}/>
+              </div>
+              <Image
+                  src={Arrow}
+                  alt="arrow for pointer"
+                    onLoad={()=>document.getElementById("arrow-loading").style.display="none"}
+              />
           </div>
           <IndexDetails/>
           <OfferSection/>

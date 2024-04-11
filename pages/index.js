@@ -9,6 +9,8 @@ import Reading from "@/components/reading/reading";
 import BlogSection from "@/components/blogSection/blogSection";
 import Footer from "@/components/footer/footer";
 import OfferSection from "@/components/OfferSection/OfferSection";
+import Skeleton from "react-loading-skeleton";
+import 'react-loading-skeleton/dist/skeleton.css'
 
 const inter = Inter({ subsets: ["latin"] });
 

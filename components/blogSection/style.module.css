@@ -4,6 +4,10 @@
     border-radius: 15px;
     padding: 12px;
 }
+.readingCart a{
+    text-decoration: none;
+    color: black;
+}
 .img{
     width: 100%;
     border-radius: 12px;

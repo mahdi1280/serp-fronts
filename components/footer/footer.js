@@ -4,8 +4,9 @@ export default function Footer(){
     return <>
         <footer className={"row mt-5 "+ style.footer}>
             <div className="col-12 col-lg-1">
-                <img src={'/logo.webp'} className={style.logo} alt={"logo"}/>
-
+                <Link href={"/"}>
+                    <img src={'/logo.webp'} className={style.logo} alt={"logo"}/>
+                </Link>
             </div>
             <div className="col-12 col-lg-4">
                 <h3>تحلیل سایت شما با ریت واچ</h3>
@@ -30,7 +31,9 @@ export default function Footer(){
 
             </div>
             <div className="col-12 col-lg-2">
-                <img src={'/logo.webp'} className={style.logo} alt={"logo"}/>
+                <Link href={"/"}>
+                    <img src={'/logo.webp'} className={style.logo} alt={"logo"}/>
+                </Link>
             </div>
             <div className="col-12">
                 <p>ساحته شده با ❤️ توسط مهدی کریمی</p>

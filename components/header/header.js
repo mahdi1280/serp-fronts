@@ -17,12 +17,14 @@ export default function Header(){
             <div id={"removeSkeletonIcon"} className={"position-ab d-none d-lg-flex"}>
                 <Skeleton width={80} height={80} borderRadius={50}/>
             </div>
-            <Image
-                src={Logo}
-                alt={"لوگوی سایت ریت واچ"}
-                className={"d-none d-lg-flex"}
-                onLoad={removeSkeletonIcon}
-            />
+            <Link href={"/"}>
+                <Image
+                    src={Logo}
+                    alt={"لوگوی سایت ریت واچ"}
+                    className={"d-none d-lg-flex"}
+                    onLoad={removeSkeletonIcon}
+                />
+            </Link>
             <span className={"d-block d-lg-none "+ style.hamberger}>
                 <svg className="MuiSvgIcon-root MuiSvgIcon-fontSizeLarge css-6flbmm" focusable="false"
                      aria-hidden="true" viewBox="0 0 24 24" data-testid="MenuRoundedIcon"><path

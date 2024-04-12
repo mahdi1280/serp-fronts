@@ -23,3 +23,32 @@
 .details{
     margin-top: 12px;
 }
+.firstSection {
+    border-radius: 12px;
+    padding: 24px;
+    font-size: 18px;
+    background-color: white;
+    box-shadow: rgba(94, 129, 209, 0.16) 0px 8px 24px;
+    margin-bottom: 20px;
+}
+.blogImage{
+    width: 70%;
+    height: fit-content;
+    border-radius: 12px;
+}
+.center{
+    justify-content: center;
+    display: flex;
+}
+.description{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.description p{
+    font-size: 16px;
+    text-align: justify;
+}
+.purpleColor{
+    color: var(--purpleColor);
+}

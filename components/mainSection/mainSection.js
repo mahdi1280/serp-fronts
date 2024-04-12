@@ -31,7 +31,6 @@ export default function MainSection() {
                 </div>
                 <Image
                     src={monitor}
-                    loading={"lazy"}
                     className={style.monitor}
                     onLoad={handleImageLoad}
                     alt="نمایش مانیتور سایت ریت واچ"/>

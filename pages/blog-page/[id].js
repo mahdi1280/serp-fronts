@@ -2,8 +2,9 @@ import Head from "next/head";
 import style from './style.module.css';
 import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
-
-export default function BlogPage(){
+import Image from "next/image";
+import BlogImage from '@/public/blog-img.jpg';
+export default function BlogPage() {
     return <>
         <Head>
             <title>صفحه وبلاگ ما سرپ انجین</title>
@@ -16,6 +17,37 @@ export default function BlogPage(){
         </Head>
         <div className="container">
             <Header/>
+            <div className={style.firstSection}>
+                <div className="row">
+                    <div className={"col-12 col-lg-6  " + style.description}>
+                        <div>
+                            <h1>این مقاله یک مقاله تستی می باشد</h1>
+                            <p >
+                                نود جی اس یک محیط اجرایی سمت سرور برای زبان جاوااسکریپت است. یعنی Node به ما این امکان را میدهد تا با جاواسکریپت برنامه های سمت سرور و بک اند را توسعه بدیم. یکی از محبوب ترین و پر استفاده ترین فریم های ورک های سمت سرور نیز Express JS است که همراه با Nodeدر این دوره به صورت کامل پوشش داده شده است
+                            </p>
+
+                            <div className={"row"}>
+                                <div className={style.purpleColor+" col-7 col-lg-8"}>
+                                    <img src={"/time.svg"} alt={"time icon"}/>
+                                    <span>تاریخ آخرین ویرایش: </span>
+                                    <span>2020/20/20</span>
+                                </div>
+                                <div className={"col-5 col-lg-4  "+style.purpleColor}>
+                                    <span> نویسنده:</span>
+                                    <span> مهدی کریمی</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className={"col-12 col-lg-6 "+style.center}>
+                        <Image
+                            src={BlogImage}
+                            alt={"blog img description"}
+                            className={style.blogImage}
+                        />
+                    </div>
+                </div>
+            </div>
             <h2 className={style.header}>
                 بلاگ سرپ انجین
             </h2>

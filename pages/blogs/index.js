@@ -2,8 +2,10 @@ import Head from "next/head";
 import BlogSection from "@/components/blogSection/blogSection";
 import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
+import {fetch} from "next/dist/compiled/@edge-runtime/primitives";
+import {MY_URL} from "@/pages/http";
 
-export default function Index(){
+export default function Index({data}){
     return <>
         <Head>
             <title>مقالات سرپ انجین</title>
@@ -20,11 +22,19 @@ export default function Index(){
                 <img src={'/imgHeader.svg'} alt={"header style list"}/>
                 مقالات
             </h2>
-            <BlogSection/>
-            <BlogSection/>
-            <BlogSection/>
-            <BlogSection/>
+            <BlogSection blogs={data.content}/>
             <Footer/>
         </div>
     </>
+}
+
+export async function getStaticProps(){
+    const res = await fetch(MY_URL+"blogs");
+    const data = await res.json();
+    return {
+        props: {
+            data
+        },
+        revalidate: 60 * 60 * 24
+    }
 }

@@ -13,6 +13,7 @@ import Skeleton from "react-loading-skeleton";
 import 'react-loading-skeleton/dist/skeleton.css'
 import Arrow from '@/public/arrow.svg'
 import {fetch} from "next/dist/compiled/@edge-runtime/primitives";
+import {MY_URL} from "@/pages/http";
 
 const inter = Inter({subsets: ["latin"]});
 
@@ -61,7 +62,7 @@ export default function Home({data}) {
 }
 
 export async function getStaticProps() {
-    const res = await fetch("http://127.0.0.1:8082/blogs/lastWeblog");
+    const res = await fetch(MY_URL+"blogs/lastWeblog");
     const data = await res.json();
     console.log(data);
     return {

@@ -1,0 +1,23 @@
+.body{
+    background-color: #f8f9fc;
+    height: 100vh;
+}
+.sidebar {
+    background-color: #4e73df;
+    color: white;
+    height: 100vh;
+    padding: 12px;
+    font-size: 22px;
+    display: flex;
+}
+.sidebar ul li{
+    list-style: none;
+    cursor: pointer;
+}
+.sidebar ul li:before{
+    content: "\f013";
+}
+
+.sidebar ul li a{
+    text-decoration: none;
+}

@@ -64,7 +64,6 @@ export default function Home({data}) {
 export async function getStaticProps() {
     const res = await fetch(MY_URL+"blogs/lastWeblog");
     const data = await res.json();
-    console.log(data);
     return {
         props: {
             data

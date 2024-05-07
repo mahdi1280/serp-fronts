@@ -1,1 +1,1 @@
-export {MY_URL,changeDate} from './http';
+export {MY_URL,changeDate,setToken,getToken} from './http';

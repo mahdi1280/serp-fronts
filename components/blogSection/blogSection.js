@@ -5,7 +5,7 @@ import {changeDate, MY_URL} from "@/pages/http";
 export default function BlogSection({blogs}) {
     const elementBlog = blogs.map(blog => <div className={"col-12 col-lg-3 mt-2"}>
         <div className={style.readingCart}>
-            <Link href={"/blog-page/1"} key={blog.id}>
+            <Link href={`/blog-page/${blog.id}`} key={blog.id}>
                 <img src={MY_URL+`blogs/image/${blog.id}`} alt={"blog img description"} className={style.img}/>
                 <h3 className={style.header}>{blog.h1Text}</h3>
                 <p className={style.details}>
@@ -19,7 +19,7 @@ export default function BlogSection({blogs}) {
                     <span className={style.readTime}>زمان تقریبی مطالعه 2 دقیقه</span>
                 </div>
                 <div className={style.btnSection}>
-                    <button href={"/blog-page/1"} className={style.btn}>مشاهده مقاله</button>
+                    <button href={`/blog-page/${blog.id}`} className={style.btn}>مشاهده مقاله</button>
                 </div>
             </Link>
         </div>

@@ -2,11 +2,10 @@ import style from './style.module.css';
 import axios from "axios";
 import {MY_URL, setToken} from "@/pages/http";
 import {useState} from "react";
-
 export default function LoginAdmin() {
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
-
+    const notify = () => toast("Wow so easy!");
     function login() {
         axios.post(MY_URL + 'api/v1/auth/authenticate', {
             email: email,
@@ -19,7 +18,9 @@ export default function LoginAdmin() {
     }
 
     return (<>
+
         <div className={style.login}>
+
             <div className="user">
                 <input type="text" placeholder={"Username"} onChange={e => setEmail(e.target.value)}/>
             </div>

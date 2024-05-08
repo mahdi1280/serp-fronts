@@ -2,6 +2,7 @@ import MainDashboard from "@/components/MainDashboard";
 import {useState} from "react";
 import axios from "axios";
 import {MY_URL} from "@/pages/http";
+import {toast} from "react-toastify";
 
 export default function addOrUpdateBlog() {
 
@@ -10,6 +11,7 @@ export default function addOrUpdateBlog() {
     const [shortDescription,setShortDescription] = useState('');
     const [description,setDescription] = useState('');
     const [image,setImage] = useState();
+    const notify = () => toast("با موفقیت اضافه شد.");
 
     function add(){
         let bodyFormData = new FormData();
@@ -21,7 +23,7 @@ export default function addOrUpdateBlog() {
         axios.post(MY_URL + "blogs", bodyFormData)
             .then(response=>response.data)
             .then(response=>{
-                alert(1);
+                notify();
             }).catch(response=>console.log(response));
     }
 

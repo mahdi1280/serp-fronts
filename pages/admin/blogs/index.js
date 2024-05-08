@@ -5,7 +5,7 @@ import {MY_URL} from "@/pages/http";
 import style from "./style.module.css";
 import Link from "next/link";
 
-export default function Ticket() {
+export default function Blogs() {
 
     const [blogs,setBlogs] = useState([]);
 
@@ -36,7 +36,7 @@ export default function Ticket() {
                 <h1>
                     وبلاگ ها
                 </h1>
-                <button className={"btn btn-success "+ style.addBtn}>افزودن وبلاگ</button>
+                <Link href={"/admin/addOrUpdateBlog"} className={"btn btn-success "+ style.addBtn}>افزودن وبلاگ</Link>
                 <table className="table">
                     <thead className="table-light">
                         <tr>

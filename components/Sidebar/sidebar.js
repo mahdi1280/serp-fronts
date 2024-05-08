@@ -1,4 +1,5 @@
 import style from "@/components/MainDashboard/style.module.css";
+import Link from "next/link";
 
 export default function Sidebar(){
     return <>
@@ -6,7 +7,7 @@ export default function Sidebar(){
             <div className={style.sidebar}>
                 <ul>
                     <li>داشبود</li>
-                    <li>وبلاگ ها</li>
+                    <li><Link href={"/admin/blogs"}>وبلاگ ها</Link></li>
                     <li>تیکت ها</li>
                     <li>نوتیفیکیشن</li>
                 </ul>

@@ -2,10 +2,13 @@ import style from './style.module.css';
 import axios from "axios";
 import {MY_URL, setToken} from "@/pages/http";
 import {useState} from "react";
+import {useRouter} from "next/router";
 export default function LoginAdmin() {
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
     const notify = () => toast("Wow so easy!");
+    const nav = useRouter();
+
     function login() {
         axios.post(MY_URL + 'api/v1/auth/authenticate', {
             email: email,
@@ -13,6 +16,7 @@ export default function LoginAdmin() {
         }).then(response => response.data)
             .then(response => {
                 setToken(response.access_token);
+                nav.push("/admin/dashboard");
             })
             .catch(response => console.log(response));
     }

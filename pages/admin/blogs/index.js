@@ -46,7 +46,7 @@ export default function Blogs() {
             <td>{blog?.h1Text}</td>
             <td>
                 <button onClick={()=>deleteBlog(blog.id)} className={"btn btn-danger"}>حذف</button>
-                <Link href={"/"} className={"btn btn-primary"}>ویرایش</Link>
+                <Link href={"/admin/addOrUpdateBlog/"+blog.id} className={"btn btn-primary"}>ویرایش</Link>
             </td>
         </tr>
     )

@@ -4,6 +4,7 @@ import axios from "axios";
 import {MY_URL} from "@/pages/http";
 import {toast} from "react-toastify";
 import {useRouter} from "next/router";
+import ToastError from "@/components/ToastError/ToastError";
 
 export default function addOrUpdateBlog() {
 
@@ -23,9 +24,9 @@ export default function addOrUpdateBlog() {
         bodyFormData.append('description', description);
         axios.post(MY_URL + "blogs", bodyFormData)
             .then(response=>response.data)
-            .then(response=>{
+            .then(()=>{
                 nav.push("/admin/blogs")
-            }).catch(response=>console.log(response));
+            }).catch(ToastError);
     }
 
     return <>

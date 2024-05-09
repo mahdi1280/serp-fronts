@@ -6,7 +6,7 @@ import {useRouter} from "next/router";
 export default function LoginAdmin() {
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
-    const notify = () => toast("Wow so easy!");
+
     const nav = useRouter();
 
     function login() {

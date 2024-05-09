@@ -10,6 +10,7 @@ export default function Sidebar(){
                     <li><Link href={"/admin/blogs"}>وبلاگ ها</Link></li>
                     <li>تیکت ها</li>
                     <li>نوتیفیکیشن</li>
+                    <li><Link href={"/"}>دیدن سایت</Link></li>
                 </ul>
             </div>
         </div>;

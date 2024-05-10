@@ -12,7 +12,7 @@ export default function Index({data}){
             <meta name="description" content="ریت واچ سایت تحلیل صفحات سایت شما برای رقابت در گوگل" />
             <meta property="og:type" content="website" />
             <meta property="og:title" content="ریت واچ" />
-            <meta property="og:description" content="سرپ انجین سایت تحلیل صفحات سایت شما برای رقابت در گوگل" />
+            <meta property="og:description" content="ریت واچ سایت تحلیل صفحات سایت شما برای رقابت در گوگل" />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <link rel="icon" href="/logo.webp" />
         </Head>

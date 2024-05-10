@@ -9,7 +9,6 @@ import Link from "next/link";
 export default function Ticket() {
     const [ticket,setTicket] = useState([]);
     function getData(){
-        console.log(getToken());
          axios.get(MY_URL+"tickets",getToken())
              .then(response=>response.data)
              .then(response=>{
@@ -27,8 +26,8 @@ export default function Ticket() {
         <td>{res?.ticketStatus}</td>
         <td>{changeDate(res?.createdAt)}</td>
         <td>
-            <button  className={"btn btn-danger"}>حذف</button>
-            <Link href={"/"} className={"btn btn-primary"}>جواب دادن </Link>
+            <button  className={"btn btn-danger"}>بستن تیکت</button>
+            <Link href={`/admin/ticket/answer/${res.ticketId}`} className={"btn btn-primary"}>جواب دادن </Link>
         </td>
     </tr>);
 

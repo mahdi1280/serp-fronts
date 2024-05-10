@@ -6,7 +6,7 @@ import {ToastContainer} from "react-toastify";
 export default function MainDashboard({child}){
     return <>
         <div className={style.body}>
-            <ToastContainer />
+            <ToastContainer position={"top-left"} />
             <div className={""}>
                 <div className="d-flex">
                     <Sidebar/>

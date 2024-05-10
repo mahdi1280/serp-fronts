@@ -26,13 +26,13 @@ export default function LoginAdmin() {
         <div className={style.login}>
 
             <div className="user">
-                <input type="text" placeholder={"Username"} onChange={e => setEmail(e.target.value)}/>
+                <input className={"form-control"} type="text" placeholder={"Username"} onChange={e => setEmail(e.target.value)}/>
             </div>
             <div className="pass">
-                <input type="password" placeholder={"password"} onChange={e => setPassword(e.target.value)}/>
+                <input className={"form-control"} type="password" placeholder={"password"} onChange={e => setPassword(e.target.value)}/>
             </div>
             <div className="send">
-                <input onClick={login} type="submit" value="login"/>
+                <input onClick={login} type="submit" value="login" className={"btn btn-primary"}/>
             </div>
         </div>
     </>);

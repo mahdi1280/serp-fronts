@@ -14,7 +14,7 @@ export default function Ticket() {
         axios.get(MY_URL + "tickets", getToken())
             .then(response => response.data)
             .then(response => {
-                setTicket(response);
+                setTicket(response.content);
             }).catch(ToastError);
     }
 

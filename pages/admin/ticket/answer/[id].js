@@ -51,19 +51,20 @@ export default function Answer() {
 
     return <>
         <MainDashboard child={
-            <div>
+            <div className={"p-5"}>
+
                 <div className="mb-3">
                     <label htmlFor="exampleInputEmail1" className="form-label">پیام</label>
                     <input value={title} onChange={e => setTitle(e.target.value)} type="text" className="form-control"
                            id="exampleInputEmail1" aria-describedby="emailHelp"/>
-                    <button type="button" onClick={() => addMessage()} className="btn btn-primary">افزودن</button>
+                    <button type="button" onClick={() => addMessage()} className="btn btn-primary mt-2">افزودن</button>
                 </div>
                 <table className="table">
                     <thead className="table-light">
                     <tr>
                         <td>#</td>
-                        <td>عنوان</td>
-                        <td>وضعیت</td>
+                        <td>پیام</td>
+                        <td>ایجاد کننده</td>
                         <td>تاریخ ایجاد</td>
                     </tr>
                     </thead>

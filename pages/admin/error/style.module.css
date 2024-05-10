@@ -1,0 +1,10 @@
+.error{
+    direction: ltr;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    width: 100%;
+    overflow: scroll;
+    padding: 20px;
+    margin-top: 20px;
+}

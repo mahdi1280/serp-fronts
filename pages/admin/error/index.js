@@ -27,7 +27,7 @@ export default function Error() {
         <td>{error?.username}</td>
         <td>{changeDate(error?.createdAt)}</td>
         <td>
-            <Link href={"/admin/addOrUpdateBlog/" + error.id} className={"btn btn-warning"}>مشاهده خطا</Link>
+            <Link href={"/admin/error/" + error.id} className={"btn btn-warning"}>مشاهده خطا</Link>
         </td>
     </tr>)
 

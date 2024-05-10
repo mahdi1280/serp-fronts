@@ -8,7 +8,7 @@ export default function Sidebar(){
                 <ul>
                     <li>داشبود</li>
                     <li><Link href={"/admin/blogs"}>وبلاگ ها</Link></li>
-                    <li>تیکت ها</li>
+                    <li> <Link href={"/admin/ticket"}>تیکت ها</Link></li>
                     <li>نوتیفیکیشن</li>
                     <li><Link href={"/"}>دیدن سایت</Link></li>
                 </ul>

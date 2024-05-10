@@ -16,7 +16,16 @@ export function changeDate(date){
 
 export function setToken(token){
     myToken = token;
+    localStorage.setItem("token",token);
 }
 export function getToken(){
-    return myToken;
+    return {
+        headers: {
+            "Authorization": "Bearer "+localStorage.getItem("token")
+        }
+    }
+}
+
+export function deleteUser(){
+    localStorage.clear();
 }

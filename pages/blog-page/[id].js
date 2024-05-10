@@ -2,12 +2,16 @@ import Head from "next/head";
 import style from './style.module.css';
 import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
-import Image from "next/image";
-import BlogImage from '@/public/blog-img.jpg';
 import {fetch} from "next/dist/compiled/@edge-runtime/primitives";
 import {changeDate, MY_URL} from "@/pages/http";
 
+
+
 export default function BlogPage({data}) {
+
+
+
+
     return <>
         <Head>
             <title>{data.title}</title>
@@ -27,7 +31,7 @@ export default function BlogPage({data}) {
                             <h1>
                                 {data.h1Text}
                             </h1>
-                            <p>
+                            <p className={style.shortDescription}>
                                 {data.shortDescription}
                             </p>
 
@@ -54,7 +58,7 @@ export default function BlogPage({data}) {
                 </div>
             </div>
             <div>
-                {data.description}
+                <p className={style.mainDescription} dangerouslySetInnerHTML={{ __html: data.description }}></p>
             </div>
             {/*<h2 className={style.header}>*/}
             {/*    بلاگ سرپ انجین*/}

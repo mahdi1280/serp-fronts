@@ -5,30 +5,47 @@ import {MY_URL} from "@/pages/http";
 import {useRouter} from "next/router";
 import ToastError from "@/components/ToastError/ToastError";
 import {useParams} from "next/navigation";
+import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
+import dynamic from "next/dynamic";
+
+import { convertToRaw, convertFromRaw, EditorState  } from 'draft-js';
 
 export default function addOrUpdateBlog() {
 
     const [title, setTitle] = useState('');
     const [h1Text, setH1Text] = useState('');
-    const [shortDescription, setShortDescription] = useState('');
-    const [description, setDescription] = useState('');
+    const [description, setDescription] = useState(() => EditorState.createWithText(''));
+    const [shortDescription, setShortDescription] = useState(() => EditorState.createWithText(''));
     const [image, setImage] = useState();
     const nav = useRouter();
     const params = useParams();
+    const Editor = dynamic(() => import('react-draft-wysiwyg').then((module) => module.Editor), { ssr: false });
 
+
+    const getTextFromEditorState = (editorState) => {
+        const contentState = editorState.getCurrentContent();
+        const rawContentState = convertToRaw(contentState);
+        let text = '';
+
+        rawContentState.blocks.forEach((block) => {
+            text += `<p>${block.text}</p>`;
+        });
+
+        return text.trim();
+    };
 
     function update() {
         let bodyFormData = new FormData();
         if (image) {
             bodyFormData.append('image', image);
-        }else{
+        } else {
             // bodyFormData.append('image', "");
         }
         bodyFormData.append('h1Text', h1Text);
         bodyFormData.append('id', params.id);
         bodyFormData.append('title', title);
         bodyFormData.append('shortDescription', shortDescription);
-        bodyFormData.append('description', description);
+        bodyFormData.append('description', getTextFromEditorState(description));
         axios.put(MY_URL + "blogs", bodyFormData)
             .then(response => response.data)
             .then(() => {
@@ -36,20 +53,22 @@ export default function addOrUpdateBlog() {
             }).catch(ToastError);
     }
 
-    useEffect(()=>{
-        if(params){
+    useEffect(() => {
+        if (params) {
             axios.get(MY_URL + `blogs/${params.id}`)
                 .then(response => response.data)
                 .then((response) => {
                     setTitle(response.title);
                     setH1Text(response.h1Text);
-                    setDescription(response.description);
-                    setShortDescription(response.shortDescription);
+                    setShortDescription(() => EditorState.createWithText(response.shortDescription));
+                    setDescription(() => EditorState.createWithText(response.description));
                 }).catch(ToastError);
         }
-    },[params])
+    }, [params])
+
 
     return <>
+
         <MainDashboard child={
             <div className={"p-5"}>
                 <div className="mb-3">
@@ -69,12 +88,19 @@ export default function addOrUpdateBlog() {
                 </div>
                 <div className="mb-3">
                     <label htmlFor="exampleInputPassword1" className="form-label">توضیحات کوتاه</label>
-                    <textarea value={shortDescription} onChange={e => setShortDescription(e.target.value)}></textarea>
+                    <Editor
+                        editorState={shortDescription}
+                        onEditorStateChange={setShortDescription}
+                    />
                 </div>
                 <div className="mb-3">
                     <label htmlFor="exampleInputPassword1" className="form-label">توضیحات بلند</label>
-                    <textarea value={description} onChange={e => setDescription(e.target.value)}></textarea>
+                    <Editor
+                        editorState={description}
+                        onEditorStateChange={setDescription}
+                    />
                 </div>
+
                 <button type="button" onClick={() => update()} className="btn btn-primary">ویرایش</button>
             </div>
         }/>

@@ -5,9 +5,12 @@ import ToastError from "@/components/ToastError/ToastError";
 import {useEffect, useState} from "react";
 import style from "@/pages/admin/blogs/style.module.css";
 import Link from "next/link";
+import {toast} from "react-toastify";
 
 export default function Ticket() {
     const [ticket,setTicket] = useState([]);
+    const notify = ()=>toast("با موفقیت حذف شد");
+
     function getData(){
          axios.get(MY_URL+"tickets",getToken())
              .then(response=>response.data)
@@ -20,13 +23,22 @@ export default function Ticket() {
         getData();
     },[])
 
+    function closeTicket(id){
+        axios.delete(MY_URL+"tickets/close/"+id,getToken())
+            .then(response=>response.data)
+            .then(()=>{
+                getData();
+                notify()
+            }).catch(ToastError);
+    }
+
     const element = ticket.map((res,index)=><tr key={index}>
         <td>{index+1}</td>
         <td>{res?.title}</td>
         <td>{res?.ticketStatus}</td>
         <td>{changeDate(res?.createdAt)}</td>
         <td>
-            <button  className={"btn btn-danger"}>بستن تیکت</button>
+            <button onClick={()=>closeTicket(res.ticketId)} className={"btn btn-danger"}>بستن تیکت</button>
             <Link href={`/admin/ticket/answer/${res.ticketId}`} className={"btn btn-primary"}>جواب دادن </Link>
         </td>
     </tr>);

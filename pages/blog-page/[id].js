@@ -9,16 +9,13 @@ import {changeDate, MY_URL} from "@/components/http/indexs";
 
 export default function BlogPage({data}) {
 
-
-
-
     return <>
         <Head>
-            <title>{data.title}</title>
-            <meta name="description" content={data.shortDescription}/>
+            {/*<title>{data?.title}</title>*/}
+            <meta name="description" content={data?.shortDescription}/>
             <meta property="og:type" content="website"/>
             <meta property="og:title" content=" ریت واچ"/>
-            <meta property="og:description" content={data.shortDescription}/>
+            <meta property="og:description" content={data?.shortDescription}/>
             <meta name="viewport" content="width=device-width, initial-scale=1"/>
             <link rel="icon" href="/logo.webp"/>
         </Head>
@@ -29,17 +26,17 @@ export default function BlogPage({data}) {
                     <div className={"col-12 col-lg-6  " + style.description}>
                         <div>
                             <h1>
-                                {data.h1Text}
+                                {data?.h1Text}
                             </h1>
-                            <p className={style.shortDescription}>
-                                {data.shortDescription}
+                            <p className={style?.shortDescription}>
+                                {data?.shortDescription}
                             </p>
 
                             <div className={"row"}>
                                 <div className={style.purpleColor + " col-7 col-lg-8"}>
                                     <img src={"/time.svg"} alt={"time icon"}/>
                                     <span>تاریخ آخرین ویرایش: </span>
-                                    <span>{changeDate(data.createdAt)}</span>
+                                    <span>{changeDate(data?.createdAt)}</span>
                                 </div>
                                 <div className={"col-5 col-lg-4  " + style.purpleColor}>
                                     <span> نویسنده:</span>
@@ -50,7 +47,7 @@ export default function BlogPage({data}) {
                     </div>
                     <div className={"col-12 col-lg-6 " + style.center}>
                         <img
-                            src={MY_URL+`blogs/image/${data.id}`}
+                            src={MY_URL+`blogs/image/${data?.id}`}
                             alt={"blog img description"}
                             className={style.blogImage}
                         />
@@ -58,7 +55,7 @@ export default function BlogPage({data}) {
                 </div>
             </div>
             <div>
-                <p className={style.mainDescription} dangerouslySetInnerHTML={{ __html: data.description }}></p>
+                <p className={style.mainDescription} dangerouslySetInnerHTML={{ __html: data?.description }}></p>
             </div>
             {/*<h2 className={style.header}>*/}
             {/*    بلاگ سرپ انجین*/}
@@ -86,12 +83,6 @@ export async function getStaticPaths(){
             {
                 params: {
                     id: "1",
-                },
-
-            },
-            {
-                params: {
-                    id: "2",
                 },
 
             },

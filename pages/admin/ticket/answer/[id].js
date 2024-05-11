@@ -1,4 +1,4 @@
-import {changeDate, getToken, MY_URL} from "@/pages/http";
+import {changeDate, getToken, MY_URL} from "@/pages/http/indexs";
 import axios from "axios";
 import ToastError from "@/components/ToastError/ToastError";
 import {useEffect, useState} from "react";

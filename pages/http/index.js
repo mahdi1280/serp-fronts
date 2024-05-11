@@ -1,1 +1,4 @@
-export {MY_URL,changeDate,setToken,getToken} from './http';
+export default function http(){
+    return <>
+    </>
+}

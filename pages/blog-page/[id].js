@@ -3,7 +3,7 @@ import style from './style.module.css';
 import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
 import {fetch} from "next/dist/compiled/@edge-runtime/primitives";
-import {changeDate, MY_URL} from "@/pages/http";
+import {changeDate, MY_URL} from "@/pages/http/indexs";
 
 
 

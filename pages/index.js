@@ -13,9 +13,8 @@ import Skeleton from "react-loading-skeleton";
 import 'react-loading-skeleton/dist/skeleton.css'
 import Arrow from '@/public/arrow.svg'
 import {fetch} from "next/dist/compiled/@edge-runtime/primitives";
-import {MY_URL} from "@/pages/http";
+import {MY_URL} from "@/pages/http/indexs";
 
-const inter = Inter({subsets: ["latin"]});
 
 export default function Home({data}) {
     return (

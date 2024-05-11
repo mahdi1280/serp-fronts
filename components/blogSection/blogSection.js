@@ -1,6 +1,6 @@
 import style from './style.module.css';
 import Link from "next/link";
-import {changeDate, MY_URL} from "@/pages/http";
+import {changeDate, MY_URL} from "@/pages/http/indexs";
 
 export default function BlogSection({blogs}) {
     const elementBlog = blogs.map(blog => <div className={"col-12 col-lg-3 mt-2"}>

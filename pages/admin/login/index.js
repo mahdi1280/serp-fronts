@@ -1,6 +1,6 @@
 import style from './style.module.css';
 import axios from "axios";
-import {MY_URL, setToken} from "@/pages/http";
+import {MY_URL, setToken} from "@/pages/http/indexs";
 import {useState} from "react";
 import {useRouter} from "next/router";
 export default function LoginAdmin() {

@@ -1,7 +1,7 @@
 import MainDashboard from "@/components/MainDashboard";
 import {useEffect, useState} from "react";
 import axios from "axios";
-import {MY_URL} from "@/pages/http/indexs";
+import {MY_URL} from "@/components/http/indexs";
 import {useRouter} from "next/router";
 import ToastError from "@/components/ToastError/ToastError";
 import {useParams} from "next/navigation";

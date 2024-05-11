@@ -1,6 +1,6 @@
 import MainDashboard from "@/components/MainDashboard";
 import axios from "axios";
-import {changeDate, getToken, MY_URL} from "@/pages/http/indexs";
+import {changeDate, getToken, MY_URL} from "@/components/http/indexs";
 import ToastError from "@/components/ToastError/ToastError";
 import {useEffect, useState} from "react";
 import Link from "next/link";

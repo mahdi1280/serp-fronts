@@ -3,7 +3,7 @@ import BlogSection from "@/components/blogSection/blogSection";
 import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
 import {fetch} from "next/dist/compiled/@edge-runtime/primitives";
-import {MY_URL} from "@/pages/http/indexs";
+import {MY_URL} from "@/components/http/indexs";
 
 export default function Index({data}){
     return <>

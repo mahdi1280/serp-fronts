@@ -1,7 +1,7 @@
 import {useParams} from "next/navigation";
 import {useEffect, useState} from "react";
 import axios from "axios";
-import {getToken, MY_URL} from "@/pages/http/indexs";
+import {getToken, MY_URL} from "@/components/http/indexs";
 import ToastError from "@/components/ToastError/ToastError";
 import MainDashboard from "@/components/MainDashboard";
 import style from "./style.module.css";

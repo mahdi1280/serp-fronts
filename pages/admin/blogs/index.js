@@ -1,7 +1,7 @@
 import MainDashboard from "@/components/MainDashboard";
 import {useEffect, useState} from "react";
 import axios from "axios";
-import {MY_URL} from "@/pages/http/indexs";
+import {MY_URL} from "@/components/http/indexs";
 import style from "./style.module.css";
 import Link from "next/link";
 import 'react-confirm-alert/src/react-confirm-alert.css';

@@ -6,34 +6,21 @@ import {useRouter} from "next/router";
 import ToastError from "@/components/ToastError/ToastError";
 import {useParams} from "next/navigation";
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
-import dynamic from "next/dynamic";
-
-import { convertToRaw, convertFromRaw, EditorState  } from 'draft-js';
+import { CKEditor } from '@ckeditor/ckeditor5-react';
+import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
 export default function addOrUpdateBlog() {
 
     const [title, setTitle] = useState('');
     const [url, setUrl] = useState('');
     const [h1Text, setH1Text] = useState('');
-    const [description, setDescription] = useState(() => EditorState.createWithText(''));
-    const [shortDescription, setShortDescription] = useState(() => EditorState.createWithText(''));
+    const [description, setDescription] = useState('');
+    const [shortDescription, setShortDescription] = useState('');
     const [image, setImage] = useState();
     const nav = useRouter();
     const params = useParams();
-    const Editor = dynamic(() => import('react-draft-wysiwyg').then((module) => module.Editor), { ssr: false });
 
 
-    const getTextFromEditorState = (editorState) => {
-        const contentState = editorState.getCurrentContent();
-        const rawContentState = convertToRaw(contentState);
-        let text = '';
-
-        rawContentState.blocks.forEach((block) => {
-            text += `<p>${block.text}</p>`;
-        });
-
-        return text.trim();
-    };
 
     function update() {
         let bodyFormData = new FormData();
@@ -47,7 +34,7 @@ export default function addOrUpdateBlog() {
         bodyFormData.append('url', url);
         bodyFormData.append('title', title);
         bodyFormData.append('shortDescription', shortDescription);
-        bodyFormData.append('description', getTextFromEditorState(description));
+        bodyFormData.append('description', description);
         axios.put(MY_URL + "blogs", bodyFormData)
             .then(response => response.data)
             .then(() => {
@@ -63,8 +50,8 @@ export default function addOrUpdateBlog() {
                     setTitle(response.title);
                     setUrl(response.url);
                     setH1Text(response.h1Text);
-                    setShortDescription(() => EditorState.createWithText(response.shortDescription));
-                    setDescription(() => EditorState.createWithText(response.description));
+                    setShortDescription(response.shortDescription);
+                    setDescription(response.description);
                 }).catch(ToastError);
         }
     }, [params])
@@ -96,18 +83,27 @@ export default function addOrUpdateBlog() {
                 </div>
                 <div className="mb-3">
                     <label htmlFor="exampleInputPassword1" className="form-label">توضیحات کوتاه</label>
-                    <Editor
-                        editorState={shortDescription}
-                        onEditorStateChange={setShortDescription}
+                    <CKEditor
+                        editor={ClassicEditor}
+                        data={shortDescription}
+                        onChange={(event, editor) => {
+                            const data = editor.getData();
+                            setShortDescription(data);
+                        }}
                     />
                 </div>
                 <div className="mb-3">
                     <label htmlFor="exampleInputPassword1" className="form-label">توضیحات بلند</label>
-                    <Editor
-                        editorState={description}
-                        onEditorStateChange={setDescription}
+                    <CKEditor
+                        editor={ClassicEditor}
+                        data={description}
+                        onChange={(event, editor) => {
+                            const data = editor.getData();
+                            setDescription(data);
+                        }}
                     />
                 </div>
+
 
                 <button type="button" onClick={() => update()} className="btn btn-primary">ویرایش</button>
             </div>

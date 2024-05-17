@@ -93,7 +93,7 @@ export async function getStaticPaths(){
 
 export async function getStaticProps(context) {
     const {params} = context;
-    const res = await fetch(MY_URL+`blogs/${params.id}`);
+    const res = await fetch(MY_URL+`blogs/url/${params.id}`);
     const data = await res.json();
     return {
         props: {

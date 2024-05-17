@@ -5,7 +5,7 @@ import {changeDate, MY_URL} from "@/components/http/indexs";
 export default function BlogSection({blogs}) {
     const elementBlog = blogs.map(blog => <div className={"col-12 col-lg-3 mt-2"}>
         <div className={style.readingCart}>
-            <Link href={`/blog-page/${blog.id}`} key={blog.id}>
+            <Link href={`/blog-page/${blog?.url}`} key={blog.id}>
                 <img src={MY_URL+`blogs/image/${blog.id}`} alt={"blog img description"} className={style.img}/>
                 <h3 className={style.header}>{blog.h1Text}</h3>
                 <p className={style.details}>

@@ -13,6 +13,7 @@ import { convertToRaw, convertFromRaw, EditorState  } from 'draft-js';
 export default function addOrUpdateBlog() {
 
     const [title, setTitle] = useState('');
+    const [url, setUrl] = useState('');
     const [h1Text, setH1Text] = useState('');
     const [description, setDescription] = useState(() => EditorState.createWithText(''));
     const [shortDescription, setShortDescription] = useState(() => EditorState.createWithText(''));
@@ -43,6 +44,7 @@ export default function addOrUpdateBlog() {
         }
         bodyFormData.append('h1Text', h1Text);
         bodyFormData.append('id', params.id);
+        bodyFormData.append('url', url);
         bodyFormData.append('title', title);
         bodyFormData.append('shortDescription', shortDescription);
         bodyFormData.append('description', getTextFromEditorState(description));
@@ -59,6 +61,7 @@ export default function addOrUpdateBlog() {
                 .then(response => response.data)
                 .then((response) => {
                     setTitle(response.title);
+                    setUrl(response.url);
                     setH1Text(response.h1Text);
                     setShortDescription(() => EditorState.createWithText(response.shortDescription));
                     setDescription(() => EditorState.createWithText(response.description));
@@ -74,6 +77,11 @@ export default function addOrUpdateBlog() {
                 <div className="mb-3">
                     <label htmlFor="exampleInputEmail1" className="form-label">تایتل</label>
                     <input value={title} onChange={e => setTitle(e.target.value)} type="text" className="form-control"
+                           id="exampleInputEmail1" aria-describedby="emailHelp"/>
+                </div>
+                <div className="mb-3">
+                    <label htmlFor="exampleInputEmail1" className="form-label">آدرس</label>
+                    <input value={url} onChange={e => setUrl(e.target.value)} type="text" className="form-control"
                            id="exampleInputEmail1" aria-describedby="emailHelp"/>
                 </div>
                 <div className="mb-3">

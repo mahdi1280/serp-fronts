@@ -44,6 +44,7 @@ export default function Blogs() {
             <td><img src={MY_URL+`blogs/image/${blog.id}`} alt={"blog img description"} className={style.img}/></td>
             <td>{blog?.title}</td>
             <td>{blog?.h1Text}</td>
+            <td>{blog?.url}</td>
             <td>
                 <button onClick={()=>deleteBlog(blog.id)} className={"btn btn-danger"}>حذف</button>
                 <Link href={"/admin/addOrUpdateBlog/"+blog.id} className={"btn btn-primary"}>ویرایش</Link>
@@ -65,6 +66,7 @@ export default function Blogs() {
                             <td>عکس</td>
                             <td>تایتل</td>
                             <td>تگ h1</td>
+                            <td>url</td>
                             <td>...</td>
                         </tr>
                     </thead>

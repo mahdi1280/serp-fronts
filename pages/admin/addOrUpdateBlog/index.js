@@ -4,6 +4,8 @@ import axios from "axios";
 import {MY_URL} from "@/components/http/indexs";
 import {useRouter} from "next/router";
 import ToastError from "@/components/ToastError/ToastError";
+import {CKEditor} from "@ckeditor/ckeditor5-react";
+import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
 
 export default function addOrUpdateBlog() {
 
@@ -58,11 +60,25 @@ export default function addOrUpdateBlog() {
                 </div>
                 <div className="mb-3">
                     <label htmlFor="exampleInputPassword1" className="form-label">توضیحات کوتاه</label>
-                    <textarea onChange={e => setShortDescription(e.target.value)}></textarea>
+                    <CKEditor
+                        editor={ClassicEditor}
+                        data={shortDescription}
+                        onChange={(event, editor) => {
+                            const data = editor.getData();
+                            setShortDescription(data);
+                        }}
+                    />
                 </div>
                 <div className="mb-3">
                     <label htmlFor="exampleInputPassword1" className="form-label">توضیحات بلند</label>
-                    <textarea onChange={e => setDescription(e.target.value)}></textarea>
+                    <CKEditor
+                        editor={ClassicEditor}
+                        data={description}
+                        onChange={(event, editor) => {
+                            const data = editor.getData();
+                            setDescription(data);
+                        }}
+                    />
                 </div>
                 <button type="button" onClick={() => add()} className="btn btn-primary">افزودن</button>
             </div>

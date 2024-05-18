@@ -35,7 +35,7 @@ export default function Header(){
             <ul className={"d-none d-lg-flex "+ style.nav}>
                 <li><Link href={"/"}>صفحه اصلی</Link></li>
                 <li><Link href={"/blogs"}>مقالات</Link></li>
-                <li><a>نظرات کاربران</a></li>
+                <li><Link href={"/learning"}>آموزش ها</Link></li>
                 <li><Link href={"/about-us"}>درباره ما</Link></li>
             </ul>
         </nav>

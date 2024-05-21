@@ -82,7 +82,7 @@ export async function getStaticPaths(){
         paths: [
             {
                 params: {
-                    id: "1",
+                    id: "tahlil-va-behine-sai-safahat",
                 },
 
             },

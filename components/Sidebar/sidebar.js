@@ -11,6 +11,7 @@ export default function Sidebar(){
                     <li> <Link href={"/admin/ticket"}>تیکت ها</Link></li>
                     <li>نوتیفیکیشن</li>
                     <li><Link href={"/admin/error"}>خطا ها</Link></li>
+                    <li><Link href={"/admin/users"}>کاربران</Link></li>
                     <li><Link href={"/"}>دیدن سایت</Link></li>
                 </ul>
             </div>

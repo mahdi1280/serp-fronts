@@ -5,7 +5,7 @@ import {MY_URL} from "@/components/http/indexs";
 import {useRouter} from "next/router";
 import ToastError from "@/components/ToastError/ToastError";
 import {useParams} from "next/navigation";
-import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
+// import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 // import { CKEditor } from '@ckeditor/ckeditor5-react';
 // import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 

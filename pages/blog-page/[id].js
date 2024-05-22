@@ -28,8 +28,7 @@ export default function BlogPage({data}) {
                             <h1>
                                 {data?.h1Text}
                             </h1>
-                            <p className={style?.shortDescription}>
-                                {data?.shortDescription}
+                            <p className={style?.shortDescription} dangerouslySetInnerHTML={{ __html: data?.shortDescription }}>
                             </p>
 
                             <div className={"row"}>

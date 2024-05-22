@@ -1,7 +1,7 @@
 
-// export const MY_URL = "http://127.0.0.1:8082/";
-export const MY_URL = "https://mainapi.ratewatch.ir/";
-// let myToken="";
+export const MY_URL = "http://127.0.0.1:8082/";
+// export const MY_URL = "https://mainapi.ratewatch.ir/";
+let myToken="";
 
 export async function get(url){
     return await fetch(url);

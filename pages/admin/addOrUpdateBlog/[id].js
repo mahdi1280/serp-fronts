@@ -5,9 +5,9 @@ import {MY_URL} from "@/components/http/indexs";
 import {useRouter} from "next/router";
 import ToastError from "@/components/ToastError/ToastError";
 import {useParams} from "next/navigation";
-// import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
-// import { CKEditor } from '@ckeditor/ckeditor5-react';
-// import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
+import { CKEditor } from '@ckeditor/ckeditor5-react';
+import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
 export default function addOrUpdateBlog() {
 
@@ -59,54 +59,54 @@ export default function addOrUpdateBlog() {
 
     return <>
 
-        {/*<MainDashboard child={*/}
-        {/*    <div className={"p-5"}>*/}
-        {/*        <div className="mb-3">*/}
-        {/*            <label htmlFor="exampleInputEmail1" className="form-label">تایتل</label>*/}
-        {/*            <input value={title} onChange={e => setTitle(e.target.value)} type="text" className="form-control"*/}
-        {/*                   id="exampleInputEmail1" aria-describedby="emailHelp"/>*/}
-        {/*        </div>*/}
-        {/*        <div className="mb-3">*/}
-        {/*            <label htmlFor="exampleInputEmail1" className="form-label">آدرس</label>*/}
-        {/*            <input value={url} onChange={e => setUrl(e.target.value)} type="text" className="form-control"*/}
-        {/*                   id="exampleInputEmail1" aria-describedby="emailHelp"/>*/}
-        {/*        </div>*/}
-        {/*        <div className="mb-3">*/}
-        {/*            <label htmlFor="exampleInputEmail1" className="form-label">متن هدر</label>*/}
-        {/*            <input value={h1Text} onChange={e => setH1Text(e.target.value)} type="text" className="form-control"*/}
-        {/*                   id="exampleInputEmail1" aria-describedby="emailHelp"/>*/}
-        {/*        </div>*/}
-        {/*        <div className="mb-3">*/}
-        {/*            <label htmlFor="exampleInputPassword1" className="form-label">عکس</label>*/}
-        {/*            <input onChange={e => setImage(e.target.files[0])} type="file" className="form-control"*/}
-        {/*                   id="exampleInputPassword1"/>*/}
-        {/*        </div>*/}
-        {/*        <div className="mb-3">*/}
-        {/*            <label htmlFor="exampleInputPassword1" className="form-label">توضیحات کوتاه</label>*/}
-        {/*            <CKEditor*/}
-        {/*                editor={ClassicEditor}*/}
-        {/*                data={shortDescription}*/}
-        {/*                onChange={(event, editor) => {*/}
-        {/*                    const data = editor.getData();*/}
-        {/*                    setShortDescription(data);*/}
-        {/*                }}*/}
-        {/*            />*/}
-        {/*        </div>*/}
-        {/*        <div className="mb-3">*/}
-        {/*            <label htmlFor="exampleInputPassword1" className="form-label">توضیحات بلند</label>*/}
-        {/*            <CKEditor*/}
-        {/*                editor={ClassicEditor}*/}
-        {/*                data={description}*/}
-        {/*                onChange={(event, editor) => {*/}
-        {/*                    const data = editor.getData();*/}
-        {/*                    setDescription(data);*/}
-        {/*                }}*/}
-        {/*            />*/}
-        {/*        </div>*/}
+        <MainDashboard child={
+            <div className={"p-5"}>
+                <div className="mb-3">
+                    <label htmlFor="exampleInputEmail1" className="form-label">تایتل</label>
+                    <input value={title} onChange={e => setTitle(e.target.value)} type="text" className="form-control"
+                           id="exampleInputEmail1" aria-describedby="emailHelp"/>
+                </div>
+                <div className="mb-3">
+                    <label htmlFor="exampleInputEmail1" className="form-label">آدرس</label>
+                    <input value={url} onChange={e => setUrl(e.target.value)} type="text" className="form-control"
+                           id="exampleInputEmail1" aria-describedby="emailHelp"/>
+                </div>
+                <div className="mb-3">
+                    <label htmlFor="exampleInputEmail1" className="form-label">متن هدر</label>
+                    <input value={h1Text} onChange={e => setH1Text(e.target.value)} type="text" className="form-control"
+                           id="exampleInputEmail1" aria-describedby="emailHelp"/>
+                </div>
+                <div className="mb-3">
+                    <label htmlFor="exampleInputPassword1" className="form-label">عکس</label>
+                    <input onChange={e => setImage(e.target.files[0])} type="file" className="form-control"
+                           id="exampleInputPassword1"/>
+                </div>
+                <div className="mb-3">
+                    <label htmlFor="exampleInputPassword1" className="form-label">توضیحات کوتاه</label>
+                    <CKEditor
+                        editor={ClassicEditor}
+                        data={shortDescription}
+                        onChange={(event, editor) => {
+                            const data = editor.getData();
+                            setShortDescription(data);
+                        }}
+                    />
+                </div>
+                <div className="mb-3">
+                    <label htmlFor="exampleInputPassword1" className="form-label">توضیحات بلند</label>
+                    <CKEditor
+                        editor={ClassicEditor}
+                        data={description}
+                        onChange={(event, editor) => {
+                            const data = editor.getData();
+                            setDescription(data);
+                        }}
+                    />
+                </div>
 
 
-        {/*        <button type="button" onClick={() => update()} className="btn btn-primary">ویرایش</button>*/}
-        {/*    </div>*/}
-        {/*}/>*/}
+                <button type="button" onClick={() => update()} className="btn btn-primary">ویرایش</button>
+            </div>
+        }/>
     </>
 }

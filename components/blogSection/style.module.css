@@ -16,13 +16,16 @@
 .header{
     margin: 12px 0;
     font-weight: bold;
+    max-height: 65px;
+    min-height: 65px;
+    overflow: hidden;
 }
 .details{
     line-height: 28px;
     font-size: 18px;
-    max-height: 162px;
     text-align: justify;
     overflow-y: hidden;
+    max-height: 144px;
 }
 .time{
     color: var(--purpleColor);

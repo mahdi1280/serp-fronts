@@ -9,7 +9,7 @@ export default function Sidebar(){
                     <li>داشبود</li>
                     <li><Link href={"/admin/blogs"}>وبلاگ ها</Link></li>
                     <li> <Link href={"/admin/ticket"}>تیکت ها</Link></li>
-                    <li>نوتیفیکیشن</li>
+                    <li><Link href={"/admin/notification"}>نوتیفیکیشن</Link></li>
                     <li><Link href={"/admin/error"}>خطا ها</Link></li>
                     <li><Link href={"/admin/users"}>کاربران</Link></li>
                     <li><Link href={"/"}>دیدن سایت</Link></li>

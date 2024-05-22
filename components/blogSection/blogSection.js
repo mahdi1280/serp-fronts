@@ -8,8 +8,10 @@ export default function BlogSection({blogs}) {
             <Link href={`/blog-page/${blog?.url}`} key={blog.id}>
                 <img src={MY_URL+`blogs/image/${blog.id}`} alt={"blog img description"} className={style.img}/>
                 <h3 className={style.header}>{blog.h1Text}</h3>
-                <p className={style.details} dangerouslySetInnerHTML={{ __html: blog?.shortDescription }}></p>
-                <div className={style.sectionTime}>c
+                <p className={style.details}>
+                    {blog?.shortDescription}
+                </p>
+                <div className={style.sectionTime}>
                     <div className={style.time}>
                         <img src={"/time.svg"} alt={"time icon"}/>
                         <p>{changeDate(blog.createdAt)}</p>

@@ -11,7 +11,7 @@ export default function BlogPage({data}) {
 
     return <>
         <Head>
-            {/*<title>{data?.title}</title>*/}
+            <title>{data?.title}</title>
             <meta name="description" content={data?.shortDescription}/>
             <meta property="og:type" content="website"/>
             <meta property="og:title" content=" ریت واچ"/>

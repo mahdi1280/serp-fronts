@@ -15,11 +15,11 @@ export default function Footer(){
                 <h3>تحلیل سایت شما با ریت واچ</h3>
                 <p>تحلیل المان های صفحات و پتیبانی 24 ساعته</p>
             </div>
-            <div className="col-12 col-lg-4">
+            <div className={"col-12 col-lg-4 "+style.navHeader}>
                 <h3>بخشش های سایت</h3>
-                <p>وبلاگ</p>
-                <p>درباره ما</p>
-                <p>نظرات کاربران</p>
+                <Link className={style.link} href={"/blogs"}>وبلاگ</Link>
+                <Link className={style.link} href={"/about-us"}>درباره ما</Link>
+                <Link className={style.link} href={"/learning"}>آموزش</Link>
                 <br/>
                 <br/>
                 <span className={style.svg}><svg className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-njucem" focusable="false"
@@ -40,8 +40,8 @@ export default function Footer(){
                     <img src={'/logo.webp'} className={style.svg} alt={"logo"}/>
                 </Link>
             </div>
-            <div className="col-12">
-                <p>ساحته شده با ❤️ توسط مهدی کریمی</p>
+            <div className="col-12 mt-2">
+                <p>ساخته شده با ❤️ توسط مهدی کریمی</p>
             </div>
         </footer>
     </>

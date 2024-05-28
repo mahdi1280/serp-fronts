@@ -20,7 +20,8 @@ export default function Home({data}) {
     return (
         <>
             <Head>
-                <title>ریت واچ</title>
+                {/*<title>ریت واچ</title>*/}
+                <title>4963480</title>
                 <meta name="description" content="ریت واچ تحلیل صفحات سایت شما برای رقابت در گوگل  موتور های جست و جو با ریت واچ پیشرفت را تجربه کنید"/>
                 <meta property="og:type" content="website"/>
                 <meta property="og:title" content="ریت واچ"/>

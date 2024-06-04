@@ -36,9 +36,11 @@ export default function Footer(){
                 </Link>
             </div>
             <div className="col-12 col-lg-2">
-                <Link href={"/"}>
-                    <img src={'/logo.webp'} className={style.svg} alt={"logo"}/>
-                </Link>
+                <a referrerPolicy='origin' target='_blank'
+                   href='https://trustseal.enamad.ir/?id=495768&Code=RrUGd8kyW3u45F63R3jeLLHmmzRHngrK'><img
+                    referrerPolicy='origin'
+                    src='https://trustseal.enamad.ir/logo.aspx?id=495768&Code=RrUGd8kyW3u45F63R3jeLLHmmzRHngrK' alt='logo enemad site'
+                    className={style.cursorPointer} code='RrUGd8kyW3u45F63R3jeLLHmmzRHngrK'/></a>
             </div>
             <div className="col-12 mt-2">
                 <p>ساخته شده با ❤️ توسط مهدی کریمی</p>
